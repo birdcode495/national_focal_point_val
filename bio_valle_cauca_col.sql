@@ -40,6 +40,16 @@ UPDATE sector_rural SET area_has = ST_Area(geom) / 10000;
 UPDATE municipalities_val SET area_has = ST_Area(geom) / 10000;
 
 
+-- Indigenous communities in Valle del Cauca
+
+---- Calculation of indigenous rural population by municipality and ethnicity
+
+SELECT municipality, SUM(emberas) AS pob_embera, SUM(nasas) AS pob_nasa, SUM(wounann) AS pob_wounan,
+SUM(pastoss) AS pob_pastos, SUM(yanaconas) AS pob_yanaconas, SUM(ingas) AS pob_ingas
+FROM sector_rural 
+GROUP BY municipality ORDER BY pob_embera, pob_nasa, pob_wounan, pob_pastos, pob_yanaconas, pob_ingas;
+
+
 
 
 
