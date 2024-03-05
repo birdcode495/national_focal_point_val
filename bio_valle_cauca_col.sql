@@ -29,5 +29,19 @@ UPDATE sector_rural SET municipality = municipalities_val.mpio_cnmbr
 FROM municipalities_val 
 WHERE ST_Intersects(sector_rural.geom, municipalities_val.geom);
 
+-- Calculation of area of territorial entities in hectares
+
+---- Creation of fields of area
+ALTER TABLE sector_rural ADD COLUMN area_has double precision;
+ALTER TABLE municipalities_val ADD COLUMN area_has double precision;
+
+---- Calculation of area
+UPDATE sector_rural SET area_has = ST_Area(geom) / 10000;
+UPDATE municipalities_val SET area_has = ST_Area(geom) / 10000;
+
+
+
+
+
 
 
