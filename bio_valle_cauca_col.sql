@@ -17,5 +17,17 @@ FROM municipalities_val, trochilidae_val
 WHERE ST_Intersects(municipalities_val.geom, trochilidae_val.geom)
 GROUP BY municipality ORDER BY richness_humming DESC;
 
+-- Geographic segmentation of DANE rural sectors by municipality
+
+---- Creation of the municipality field in the rural sectors layer
+
+ALTER TABLE sector_rural ADD COLUMN municipality varchar(50);
+
+---- Geographic segmentation
+
+UPDATE sector_rural SET municipality = municipalities_val.mpio_cnmbr
+FROM municipalities_val 
+WHERE ST_Intersects(sector_rural.geom, municipalities_val.geom);
+
 
 
