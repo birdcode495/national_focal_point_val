@@ -62,7 +62,7 @@ ORDER BY hummingbird_richness DESC;
 
 -- Kingdom: Plantae (Georreferenced GBIF records in Valle del Cauca)
 
-SELECT scientific AS scientific_name, family, taxonrank, COUNT(DISTINCT id) AS GBIF_rec FROM plantae_valle
+SELECT scientific AS scientific_name, family, COUNT(DISTINCT id) AS GBIF_rec FROM plantae_valle
 GROUP BY scientific_name, family, taxonrank ORDER BY GBIF_rec DESC;
 
 
