@@ -94,6 +94,17 @@ GROUP BY scientific_name, family, taxonrank ORDER BY gbif_rec DESC;
 
 
 
+-- Kingdom: Amphibia (Georreferenced GBIF records in Valle del Cauca)
+
+---- Creation of amphibians species list in Valle del Cauca according to GBIF
+
+SELECT scientific AS scientific_name, family, taxonrank, COUNT(DISTINCT id) AS gbif_rec FROM amphibia_valle
+GROUP BY scientific_name, family, taxonrank ORDER BY gbif_rec DESC;
+
+
+
+
+
 
 
 
