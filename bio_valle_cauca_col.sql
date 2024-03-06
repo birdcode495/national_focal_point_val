@@ -84,6 +84,14 @@ FROM plantae_valle WHERE municipality = 'CALI'
 GROUP BY scientific_name, family, taxonrank ORDER BY gbif_rec DESC;
 
 
+-- Kingdom: Mammalia (Georreferenced GBIF records in Valle del Cauca)
+
+---- Creation of mammals species list in Valle del Cauca according to GBIF
+
+SELECT scientific AS scientific_name, family, taxonrank, COUNT(DISTINCT id) AS gbif_rec FROM mammalia_valle
+GROUP BY scientific_name, family, taxonrank ORDER BY gbif_rec DESC;
+
+
 
 
 
