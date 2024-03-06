@@ -50,6 +50,16 @@ FROM sector_rural
 GROUP BY municipality ORDER BY pob_embera, pob_nasa, pob_wounan, pob_pastos, pob_yanaconas, pob_ingas;
 
 
+---- Calculation of hummingbird species richness by sector rural and ethnicity
+
+SELECT setr_ccnct AS sector_rural_cod, municipality emberas, nasas, wounann, pastoss, yanaconas, ingas,
+COUNT(DISTINCT species) AS hummingbird_richness
+FROM sector_rural, trochilidae_val
+WHERE ST_Intersects(sector_rural.geom, trochilidae_val.geom)
+GROUP BY sector_rural_cod, municipality, emberas, nasas, wounann, pastoss, yanaconas, ingas 
+ORDER BY hummingbird_richness DESC;
+
+
 
 
 
