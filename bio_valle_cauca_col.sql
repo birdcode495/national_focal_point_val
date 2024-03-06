@@ -65,6 +65,24 @@ ORDER BY hummingbird_richness DESC;
 SELECT scientific AS scientific_name, family, COUNT(DISTINCT id) AS GBIF_rec FROM plantae_valle
 GROUP BY scientific_name, family, taxonrank ORDER BY GBIF_rec DESC;
 
+-- Geographic segmentation of GBIF records of plants by municipality in Valle del Cauca
+
+---- Creation of field of municipality in plantae layer
+
+ALTER TABLE plantae_valle ADD COLUMN municipality varchar(50);
+
+---- Geographical segmentation
+
+UPDATE plantae_valle SET municipality = municipalities_val.mpio_cnmbr
+FROM municipalities_val
+WHERE ST_Intersects(plantae_valle.geom, municipalities_val.geom);
+
+-- List of plant species in Cali according to GBIF
+
+SELECT scientific AS scientific_name, family, taxonrank, COUNT(DISTINCT id) AS gbif_rec
+FROM plantae_valle WHERE municipality = 'CALI'
+GROUP BY scientific_name, family, taxonrank ORDER BY gbif_rec DESC;
+
 
 
 
