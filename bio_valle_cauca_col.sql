@@ -20,11 +20,18 @@ FROM municipalities_val, trochilidae_val
 WHERE ST_Intersects(municipalities_val.geom, trochilidae_val.geom)
 GROUP BY municipality ORDER BY richness_humming DESC;
 
+---- Geographical segmentation of hummingbird layer by location in municipality
+
+ALTER TABLE trochilidae_val ADD COLUMN municipality varchar(80);
+
+UPDATE trochilidae_val SET municipality = municipalities_val.mpio_cnmbr FROM municipalities_val
+WHERE ST_Intersects(trochilidae_val.geom, municipalities_val.geom);
+
 ---- Creation of a list of hummingbird sighting places in Valle del Cauca
 
-SELECT locality, COUNT(DISTINCT species) AS species_richness, COUNT(DISTINCT id) AS gbif_records,
+SELECT locality, municipality, COUNT(DISTINCT species) AS species_richness, COUNT(DISTINCT id) AS gbif_records,
 MIN(decimallat) AS latitude, MIN(decimallon) AS longitude
-FROM trochilidae_val GROUP BY locality ORDER BY species_richness DESC, gbif_records;
+FROM trochilidae_val GROUP BY locality, municipality ORDER BY species_richness DESC, gbif_records;
 
 -- Geographic segmentation of DANE rural sectors by municipality
 
