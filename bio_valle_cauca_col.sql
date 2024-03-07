@@ -22,7 +22,8 @@ GROUP BY municipality ORDER BY richness_humming DESC;
 
 ---- Creation of a list of hummingbird sighting places in Valle del Cauca
 
-SELECT locality, COUNT(DISTINCT species) AS species_richness, COUNT(DISTINCT id) AS gbif_records
+SELECT locality, COUNT(DISTINCT species) AS species_richness, COUNT(DISTINCT id) AS gbif_records,
+MIN(decimallat) AS latitude, MIN(decimallon) AS longitude
 FROM trochilidae_val GROUP BY locality ORDER BY species_richness DESC, gbif_records;
 
 -- Geographic segmentation of DANE rural sectors by municipality
