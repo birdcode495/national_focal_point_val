@@ -3,19 +3,27 @@
 
 CREATE EXTENSION postgis;
 
--- Creation of the table of hummingbird species sighted in Valle del Cauca, 
--- according to the information published by the GBIF
+
+-- Family: Trochilidae (Hummingbirds, Georreferenced GBIF records in Valle del Cauca)
+
+---- Creation of the table of hummingbird species sighted in Valle del Cauca, 
+---- according to the information published by the GBIF
 
 SELECT species, genus, COUNT(DISTINCT id) AS gbif_rec FROM trochilidae_val
 GROUP BY species, genus ORDER BY gbif_rec DESC;
 
--- Creation of the hummingbird species richness table by municipality 
--- of Valle del Cauca
+---- Creation of the hummingbird species richness table by municipality 
+---- of Valle del Cauca
 
 SELECT mpio_cnmbr AS municipality, COUNT(DISTINCT species) AS richness_humming
 FROM municipalities_val, trochilidae_val 
 WHERE ST_Intersects(municipalities_val.geom, trochilidae_val.geom)
 GROUP BY municipality ORDER BY richness_humming DESC;
+
+---- Creation of a list of hummingbird sighting places in Valle del Cauca
+
+SELECT locality, COUNT(DISTINCT species) AS species_richness, COUNT(DISTINCT id) AS gbif_records
+FROM trochilidae_val GROUP BY locality ORDER BY species_richness DESC, gbif_records;
 
 -- Geographic segmentation of DANE rural sectors by municipality
 
