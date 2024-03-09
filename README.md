@@ -34,3 +34,7 @@ organizes it, in a Project with a territorial scale at the national level, which
 process, serves as an educational model replicable on a global scale.
 
 The example model presented is implemented based on the set of flora and fauna biodiversity data reported by the Global Biodiversity Information Facility, for the territory for the Valle del Cauca region, in which the city of Cali, which is the headquarters of the Conference of the Parties COP-16, to be held between October 21 and November 1, 2024 is located.
+
+
+You can consult the website of the National Policy for the Comprehensive Management of Biodiversity and its Ecosystem Services
+[following this link] (https://www.minambiente.gov.co/direccion-de-bosques-biodiversidad-y-servicios-ecosistemicos/politica-nacional-para-la-gestion-integral-de-la-biodiversidad-y-sus-servicios-ecosistemicos/)
