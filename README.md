@@ -4,34 +4,32 @@
 Biodiversidad y sus Servicios Ecosistémicos (PNGIBSE)
 (MADS et al., 2012).
 
-La biodiversidad del país debe ser entendida a la
-luz de su interacción con la sociedad. Este enfoque
-asumido por la PNGIBSE ha dado lugar a seis ejes
-temáticos dirigidos a potenciar y manejar la
-riqueza natural del país.
+The country's biodiversity must be understood
+light of its interaction with society. This approach
+assumed by PNGIBSE has given rise to six axes
+thematic topics aimed at promoting and managing the
+natural wealth of the country.
 
-Bajo estos enunciados, la PNGIBSE propone los siguientes seis ejes te-
-máticos:
+Under these statements, PNGIBSE proposes the following six thematic axes:
 
-1. Biodiversidad, conservación y cuidado de la naturaleza.
-2. Biodiversidad, gobernanza y creación de valor público.
-3. Biodiversidad, desarrollo económico y calidad de vida.
-4. Biodiversidad, gestión del conocimiento, tecnología e información.
-5. Biodiversidad, gestión del riesgo y suministro de servicios ecosistemicos.
-6. Biodiversidad, corresponsabilidad y compromisos globales.
+1. Biodiversity, conservation and care of nature.
+2. Biodiversity, governance and creation of public value.
+3. Biodiversity, economic development and quality of life.
+4. Biodiversity, knowledge management, technology and information.
+5. Biodiversity, risk management and provision of ecosystem services.
+6. Biodiversity, co-responsibility and global commitments.
 
-En ese sentido, esta propuesta de desarrollo de una base de datos espacial integral respecto al
-tema de diagnóstico de la biodiversidad del país, busca realizar un aporte para integrar
-recursos tecnológicos que contribuyan a visibilizar fuentes de información acreditadas
-respecto a registros georreferenciados de presencia de especies de flora y fauna en los
-distintos territorios. Esta base de datos puede brindar un marco útil para la formación de
-la ciudadanía en el tema de la diversidad biológica, integrando elementos propios de la
-metodología STEM, para diseñar y consolidar un modelo interdisciplinario de educación no formal con
-contenidos de bioidiversidad, programación de software y trilinguismo que propongan a la
-ciudadanía de Colombia un banco de datos mediante el cual se inicie un proceso de construcción
-cultural y popular de conocimiento sistematico y organizado de los recursos de biodiversidad 
-que recoja los saberes populares de este tópico y los organice en un Proyecto con alcances 
-territoriales a nivel nacional, que en su proceso de implementación sirva como modelo educativo
-replicable a escala global. 
-
+In that sense, this proposal to develop a comprehensive spatial database regarding the
+issue of diagnosis of the country's biodiversity, seeks to make a contribution to integrate
+technological resources that contribute to making accredited sources of information visible
+regarding georeferenced records of the presence of flora and fauna species in the
+different territories. This database can provide a useful framework for the formation of
+citizenship on the issue of biological diversity, integrating elements of
+STEM methodology, to design and consolidate an interdisciplinary model of non-formal education with
+biodiversity content, software programming and trilingualism that propose to the
+citizens of Colombia a data bank through which a formal construction process can begin
+cultural and popular systematic and organized knowledge of biodiversity resources
+that collects the popular knowledge of this topic and organizes it in a Project with scope
+territorial at the national level, which in its implementation process serves as an educational model
+replicable on a global scale.
 
